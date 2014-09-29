@@ -1,0 +1,29 @@
+<h1>Listing categories<span class='create-new'><%= link_to 'New Category', new_category_path, class: 'btn-large btn-primary pull-right' %></span></h1>
+
+<section class="task-list-wrapper">
+  <div class="task-head row">
+      <span class="span2">Name</span>
+      <div class="span2">
+        <div class="row">
+          <span class="span2"></span>
+          <span class="span2"></span>
+          <span class="span2"></span>
+        </div>
+      </div>
+  </div>
+
+  <div class="category-list row">
+    <% @categories.each do |category| %>
+      <div class="category-category row">
+        <span class="span5"><strong><%= category.name %></strong></span>
+        <div class="row span3">
+          <span class="span1"><%= link_to 'Edit', edit_category_path(category), class: 'btn-success' %></span>
+          <span class="span1"><%= link_to 'Delete', category, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-danger' %></span>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>
+
+
+
