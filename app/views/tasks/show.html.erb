@@ -7,7 +7,7 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @task.category.name %>
+  <%= show_category_name(@task.category) %>
 </p>
 
 <span class="btn-priamry"><%= link_to 'Edit', edit_task_path(@task), class: 'btn-a btn-success' %></span> |
