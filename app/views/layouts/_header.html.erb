@@ -1,3 +1,9 @@
+<% 
+c = :categories
+if c.empty? 
+  flash('You must create a category before creating a task!')
+end 
+%>
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
