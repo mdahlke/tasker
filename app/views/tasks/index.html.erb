@@ -2,28 +2,21 @@
 
 <section class="task-list-wrapper">
   <div class="task-head row">
-      <span class="span2">Description</span>
-      <span class="span2">Category</span>
+      <span class="span5">Description</span>
+      <span class="span3">Category</span>
       <div class="span2">
-        <div class="row">
-          <span class="span2"></span>
-          <span class="span2"></span>
-          <span class="span2"></span>
-        </div>
       </div>
   </div>
 
   <div class="task-list">
     <% @tasks.each do |task| %>
       <div class="task-task row">
-        <span class="span2"><strong><%= task.description %></strong></span>
-        <span class="span2"><%= task.category.name %></span>
-        <div class="controls span6">
-          <div class="row">
-            <span class="span1"><%= link_to 'Show', task, { class: 'btn-primary' } %></span>
-            <span class="span1"><%= link_to 'Edit', edit_task_path(task), { class: 'btn-success' } %></span>
-            <span class="span1"><%= link_to 'Finished', task, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-danger' %></span>
-          </div>
+        <span class="span5"><strong><%= task.description %></strong></span>
+        <span class="span3"><%= task.category.name %></span>
+        <div class="controls span3">
+            <span><%= link_to 'Show', task, { class: 'btn-primary btn-a' } %></span>
+            <span><%= link_to 'Edit', edit_task_path(task), { class: 'btn-success btn-a' } %></span>
+            <span><%= link_to 'Finished', task, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-danger btn-a' %></span>
         </div>
       </div>
     <% end %>

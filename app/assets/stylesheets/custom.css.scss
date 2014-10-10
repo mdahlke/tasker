@@ -4,6 +4,11 @@
 
 $grayMediumLight: #eaeaea;
 
+.btn-a {
+   padding:.5em;
+   color:white !important;
+}
+ 
 /* universal */
 
 html {
@@ -134,15 +139,12 @@ footer {
    }
     
    .task-task, .category-category {
-     padding:.5em 0em;
+     padding:1em 0em;
      
      &:nth-of-type( odd ){
        background-color:$grayLight;
        color:white;
      }
-     a {
-       padding:.5em;
-     }
-   }
+  }
   
 }

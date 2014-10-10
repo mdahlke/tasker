@@ -4,6 +4,8 @@ Tasker::Application.routes.draw do
   resources :categories
   
   root 'tasks#index'
+  match '/tasks',        to: 'tasks#index',       via: 'get'
+  match '/categories',   to: 'categories#index',  via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

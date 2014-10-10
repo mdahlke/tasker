@@ -1,3 +1,4 @@
+<% provide( :title, 'Categories' ) %>
 <h1>Listing categories<span class='create-new'><%= link_to 'New Category', new_category_path, class: 'btn-large btn-primary pull-right' %></span></h1>
 
 <section class="task-list-wrapper">
@@ -15,10 +16,10 @@
   <div class="category-list row">
     <% @categories.each do |category| %>
       <div class="category-category row">
-        <span class="span5"><strong><%= category.name %></strong></span>
-        <div class="row span3">
-          <span class="span1"><%= link_to 'Edit', edit_category_path(category), class: 'btn-success' %></span>
-          <span class="span1"><%= link_to 'Delete', category, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-danger' %></span>
+        <span class="span9"><strong><%= category.name %></strong></span>
+        <div class="span2">
+          <span><%= link_to 'Edit', edit_category_path(category), class: 'btn-success btn-a' %></span>
+          <span><%= link_to 'Delete', category, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-danger btn-a' %></span>
         </div>
       </div>
     <% end %>
