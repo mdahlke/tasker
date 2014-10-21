@@ -1,0 +1,7 @@
+Great use of the RSpec have_many and belongs_to matchers. 
+
+The tests all pass.
+
+Good job giving a nice drop down for the tasks to assign them to a category.
+
+Nice job all ready haivng styles.
