@@ -17,6 +17,7 @@ html {
 
 body {
   padding-top: 60px;
+  color:#414141;
 }
 
 section {
@@ -114,16 +115,16 @@ footer {
 
 /*  Tasks */
 .task-list-wrapper, .category-list-wrapper {
-  border: 1px solid lightgray;
+  border: 2px solid rgb(145, 144, 144);
   box-sizing:border-box;
-  width:100%;
   overflow:hidden;
   
     .task-head {
       padding:1em;
-      background-color:black;
-      color:white;
+      background-color:lightgray;
       border-bottom: 2px solid gray;
+      font-weight:800;
+      font-size:1.1em;
       width:auto;
     }
  
