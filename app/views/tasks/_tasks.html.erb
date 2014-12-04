@@ -2,22 +2,13 @@
   <div class="task-head row">
       <span class="col-xs-6">Description</span>
       <span class="col-xs-3">Category</span>
-      <div class="col-xs-3">
-      </div>
+      <span class="col-xs-3"></span>
   </div>
 
   <div class="task-list row">
     <% if @user.tasks.any? %>
-    <% @user.tasks.each do |task| %>
-        <div class="task-task row">
-          <span class="col-xs-6"><strong><%= task.description %></strong></span>
-          <span class="col-xs-3"><%= show_category_name( task.category ) %></span>
-          <div class="controls col-xs-3">
-              <span><%= link_to 'Show', task, { class: 'btn-primary btn' } %></span>
-              <span><%= link_to 'Edit', edit_task_path(task), { class: 'btn-success btn' } %></span>
-              <span><%= link_to 'Finished', task, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-danger btn' %></span>
-          </div>
-        </div>
+      <% @user.tasks.each do |task| %>
+        <%= render 'task' %>
       <% end %>
     <% end %>
   </div>

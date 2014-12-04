@@ -7,8 +7,12 @@ class UsersController < ApplicationController
   end
   
   def show
-    @user = current_user
-    @tasks = @user.tasks.paginate(page: params[:page])
+    if correct_user
+      @user = current_user
+      @tasks = @user.tasks.paginate(page: params[:page])
+    else 
+      redirect_to root_url
+    end
   end
   
   def new
