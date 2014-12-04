@@ -1,11 +1,15 @@
 Tasker::Application.routes.draw do
+  resources :users
+  resources :sessions,      only: [:new, :create, :destroy]
   resources :tasks
-
   resources :categories
   
-  root 'tasks#index'
+  root 'static_pages#home'
   match '/tasks',        to: 'tasks#index',       via: 'get'
   match '/categories',   to: 'categories#index',  via: 'get'
+  match '/signup',	     to: 'users#new',		      via: 'get' 
+  match '/signin',	     to: 'sessions#new',		  via: 'get'
+  match '/signout',      to: 'sessions#destroy',  via: 'delete'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

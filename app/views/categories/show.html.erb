@@ -6,9 +6,7 @@
 </p>
 
 <% @tasks.each do |task| %>
-<div class="row">
-  <p><% task.name %></p>
-</div>
+<%= render 'tasks/tasks' %>
 <% end %>
 
 <%= link_to 'Edit', edit_category_path(@category) %> |

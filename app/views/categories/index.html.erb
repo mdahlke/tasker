@@ -1,5 +1,5 @@
 <% provide( :title, 'Categories' ) %>
-<h1>Listing categories<span class='create-new'><%= link_to 'New Category', new_category_path, class: 'btn-large btn-primary pull-right' %></span></h1>
+<h1>Listing categories<span class='create-new'><%= link_to 'New Category', new_category_path, class: 'btn btn-large btn-primary pull-right' %></span></h1>
 
 <section class="task-list-wrapper container">
   <div class="task-head row">
@@ -10,7 +10,8 @@
   <div class="category-list row">
     <% @categories.each do |category| %>
       <div class="category-category row">
-        <span class="col-xs-9"><strong><%= category.name %></strong></span>
+        <span class="col-xs-9"><strong>
+          <%= link_to category.name, category %></strong></span>
         <div class="col-xs-3">
           <span><%= link_to 'Edit', edit_category_path(category), class: 'btn-success btn' %></span>
           <span><%= link_to 'Delete', category, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-danger btn' %></span>

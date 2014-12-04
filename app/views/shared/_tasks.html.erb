@@ -1,0 +1,14 @@
+<section class="task-list-wrapper">
+  <div class="task-head row">
+      <span class="col-xs-6">Description</span>
+      <span class="col-xs-3">Category</span>
+      <div class="col-xs-3">
+      </div>
+  </div>
+
+  <div class="task-list row">
+    <% if @user.tasks.any? %>
+    <%= render @user.tasks %>
+    <% end %>
+  </div>
+</section>

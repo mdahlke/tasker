@@ -1,0 +1,20 @@
+<% provide( :title, '') %>
+
+<% if signed_in? %>
+  <aside class="col-xs-12 col-sm-4">
+    <%= render 'shared/new_task_form' %>
+  </aside>
+  <section class="col-xs-12 col-sm-8">
+    <%= render 'shared/tasks' %>
+  </section>
+<% else %>
+
+<h2>Welcome to Tasker!</h2>
+
+<div class="row">
+  <div class="col-xs-12 col-md-6">
+    <%= render 'shared/signin_form' %>
+  </div>
+</div>
+
+<% end %>
