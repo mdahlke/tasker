@@ -8,7 +8,7 @@ describe "Categories" do
     
     before { visit categories_path }
     
-    it { should have_content( 'Categories' ) }
+    it { should have_content( 'categories' ) }
     it { should have_title( page_title( 'Categories' ) ) }
     
     
